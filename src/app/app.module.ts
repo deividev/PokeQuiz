@@ -5,8 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { IconsComponent } from './shared/ui-kit/icons/icons.component';
 import { SharedModule } from './shared/shared.module';
+import { CookieService } from 'ngx-cookie-service';
+import { HttpClient, HttpClientModule, HttpHandler, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptorInterceptor } from './jwt-interceptor.interceptor';
+import { AuthGuard } from './shared/guards/auth.guard';
+import { AuthServiceService } from './auth/services/auth-service.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +20,20 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    HttpClient,
+
+
+    // AuthGuard,
+    // AuthServiceService,
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: JwtInterceptorInterceptor,
+    //   multi: true}
+  ],
   exports: [SharedModule],
   bootstrap: [AppComponent]
 })
