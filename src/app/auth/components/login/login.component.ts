@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
 
 
   loginUser(): void {
-
     this.authService.loginUser(this.loginUserData)
       .subscribe(
         res => {
