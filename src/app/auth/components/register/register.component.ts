@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthResponse, RegisterRequest } from '../../models/user';
 import { AuthServiceService } from '../../services/auth-service.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AuthServiceService } from '../../services/auth-service.service';
 })
 export class RegisterComponent implements OnInit {
 
-  resgisterUserData =
+  resgisterUserData: RegisterRequest =
   {
     "username": "papa",
     "email": "papa@paco.io",
@@ -23,7 +24,7 @@ export class RegisterComponent implements OnInit {
   registerUser(): void {
     this.authService.registerUser(this.resgisterUserData)
       .subscribe(
-        res => {
+        (res: AuthResponse) => {
           console.log(res);
           localStorage.setItem('token', res.jwt)
         },

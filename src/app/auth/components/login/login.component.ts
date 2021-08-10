@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthResponse, LoginRequest } from '../../models/user';
 import { AuthServiceService } from '../../services/auth-service.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AuthServiceService } from '../../services/auth-service.service';
 })
 export class LoginComponent implements OnInit {
 
-  loginUserData =
+  loginUserData: LoginRequest =
   {
     "identifier": "user@strapi.io",
     "password": "Test1895"
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit {
   loginUser(): void {
     this.authService.loginUser(this.loginUserData)
       .subscribe(
-        res => {
+        (res: AuthResponse) => {
           console.log(res);
           localStorage.setItem('token', res.jwt)
         },
