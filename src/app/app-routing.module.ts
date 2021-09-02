@@ -5,7 +5,7 @@ import { IconsComponent } from './shared/ui-kit/icons/icons.component';
 
 const routes: Routes = [
 
-  { path: '', redirectTo: '/auth', pathMatch: 'full' },
+  { path: '', redirectTo: '/auth/login', pathMatch: 'full' },
   { path: 'auth',  loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
   {
     path: 'Ui',
