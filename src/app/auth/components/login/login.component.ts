@@ -11,8 +11,8 @@ export class LoginComponent implements OnInit {
 
   loginUserData: LoginRequest =
   {
-    "identifier": "user@strapi.io",
-    "password": "Test1895"
+    "identifier": "deivid@gmail.com",
+    "password": "test123456789"
   };;
 
   constructor(private authService: AuthServiceService) { }
