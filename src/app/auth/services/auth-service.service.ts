@@ -22,6 +22,10 @@ export class AuthServiceService {
     return !!localStorage.getItem('token');
   }
 
+  resetPasswordUser(email): any {
+    return this.http.post<any>(environment.resetPasswordStrapi, email);
+  }
+
   // getToken(): any {
   //   return localStorage.getItem('token');
   // }

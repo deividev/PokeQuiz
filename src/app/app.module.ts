@@ -6,11 +6,9 @@ import { AppComponent } from './app.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from './shared/shared.module';
-import { CookieService } from 'ngx-cookie-service';
-import { HttpClient, HttpClientModule, HttpHandler, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { JwtInterceptorInterceptor } from './jwt-interceptor.interceptor';
-import { AuthGuard } from './shared/guards/auth.guard';
-import { AuthServiceService } from './auth/services/auth-service.service';
+
+import { HttpClient, HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -25,8 +23,6 @@ import { AuthServiceService } from './auth/services/auth-service.service';
   ],
   providers: [
     HttpClient,
-
-
     // AuthGuard,
     // AuthServiceService,
     // {

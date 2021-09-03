@@ -45,3 +45,7 @@ export interface LoginRequest {
   password: string;
 }
 
+export interface ResetPasswordRequest {
+  email: string;
+}
+

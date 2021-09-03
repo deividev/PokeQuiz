@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   regiterStrapi: 'http://localhost:1337/auth/local/register',
-  loginStrapi: 'http://localhost:1337/auth/local'
+  loginStrapi: 'http://localhost:1337/auth/local',
+  resetPasswordStrapi: 'http://localhost:1337/auth/forgot-password',
 };
 
 /*
