@@ -1,14 +1,50 @@
-
-<form action="">
-  <div class="flex flex-col items-center justify-center w-96">
-    <div class="flex flex-col">
-      <label for="email">Email</label>
-      <input class="border-2 border-gray-300" type="text" name="email" id="email">
-    </div>
-    <div class="flex flex-col">
-      <label for="password">Password</label>
-      <input class="border-2 border-gray-300" type="password" name="password" id="password">
-    </div>
-    <button class="p-2 w-15 h-10 text-black border-2 border-gray-300" (click)="registerUser()">Enviar</button>
+<div class="bg-gradient-to-b from-yellow-200 to-yellow-400 w-100 h-screen flex flex-col items-center">
+  <h1 class="mt-2 text-5xl font-extrabold font-sans">PokeQuiz</h1>
+  <div class="w-1/2 flex-1 flex flex-col items-center justify-center">
+    <form [formGroup]="formRegister" class="bg-white p-10 rounded-md  w-1/2 flex flex-col justify-center">
+      <div class="relative h-10 input-component empty mb-4">
+        <input
+          formControlName="username"
+          id="username"
+          type="username"
+          name="username"
+          class="h-full w-full border-gray-300 px-2 transition-all border-blue rounded-md"
+        />
+        <label for="username" class="absolute left-2 transition-all bg-white px-1">
+          Username
+        </label>
+      </div>
+      <div class="relative h-10 input-component empty mb-4">
+        <input
+          formControlName="email"
+          id="email"
+          type="email"
+          name="email"
+          class="h-full w-full border-gray-300 px-2 transition-all border-blue rounded-md"
+        />
+        <label for="email" class="absolute left-2 transition-all bg-white px-1">
+          Email
+        </label>
+      </div>
+      <div class="relative h-10 input-component empty mb-4">
+        <input
+          formControlName="password"
+          id="password"
+          type="password"
+          name="password"
+          class="h-full w-full border-gray-300 px-2 transition-all border-blue rounded-md"
+        />
+        <label for="password" class="absolute left-2 transition-all bg-white px-1">
+          Password
+        </label>
+      </div>
+      <div class="flex items-center justify-center mb-4">
+        <p>I have account? <a routerLink="/auth/login" class="underline">Sign in</a> </p>
+      </div>
+      <div class="flex items-center justify-center">
+        <button  (click)="registerUser()" class="py-3 px-6 text-white rounded-lg bg-blue-400 shadow-lg block md:inline-block">Register</button>
+      </div>
+    </form>
   </div>
-</form>
+</div>
+
