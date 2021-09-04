@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IconsComponent } from './ui-kit/icons/icons.component';
-import { AppModule } from '../app.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RandomLettersComponent } from './components/random-letters/random-letters.component';
 
 
 
 @NgModule({
   declarations: [
-    IconsComponent
+    IconsComponent,
   ],
   imports: [
     CommonModule,
