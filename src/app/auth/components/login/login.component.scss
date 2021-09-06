@@ -4,14 +4,17 @@ label {
   transform: translateY(-50%);
   font-size: 11px;
   color: rgba(37, 99, 235, 1);
-
 }
 .empty input:not(:focus) + label {
   top: 50%;
   transform: translateY(-50%);
   font-size: 14px;
-  width: 150px;
+  width: 60px;
+  @media (min-width: 1024px) {
+    width: 150px;
+  }
 }
+
 input:not(:focus) + label {
   color: rgba(70, 70, 70, 1);
 }
