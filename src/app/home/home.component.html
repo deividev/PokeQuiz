@@ -22,28 +22,7 @@
       <button class="py-3 px-6 max-h-24 text-white rounded-lg bg-blue-400 shadow-lg block md:inline-block text-4xl cursor-pointer focus:outline-none">Start Game</button>
     </div>
     <!-- Component List Scores -->
-    <div class="flex justify-center">
-      <div class="bg-white p-10 rounded-md w-2/4">
-        <div class=" border-b-2 flex py-4">
-          <span class="mr-4">1</span>
-          <p>12345</p>
-        </div>
-        <div class=" border-b-2 flex py-4">
-          <span class="mr-4">1</span>
-          <p>12345</p>
-        </div>
-        <div class=" border-b-2 flex py-4">
-          <span class="mr-4">1</span>
-          <p>12345</p>
-        </div>
-        <div class=" border-b-2 flex py-4">
-          <span class="mr-4">1</span>
-          <p>12345</p>
-        </div>
-
-
-      </div>
-    </div>
+      <app-list-order [scoreList]="scoreList" class="w-full flex justify-center" ></app-list-order>
     <!-- Component List comodines -->
   </div>
 
